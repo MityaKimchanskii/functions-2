@@ -4,7 +4,7 @@
     storing the results of your function calls.
 */
 
-////////// PROBLEM 1 //////////
+////////// PROBLEM 1 //////////////////////////////////////////////////////////////////////////////////////////
 
 // Do not edit the code below.
 const mixedNumbers = [6,3,1,7,5,2,6,8,9,4,2,7,9,3,1,8,4,3];
@@ -18,11 +18,12 @@ const mixedNumbers = [6,3,1,7,5,2,6,8,9,4,2,7,9,3,1,8,4,3];
 */
 
 // CODE HERE
-const evenNumbers // = mixedNumbers.filter(/* Provide Your Callback Here */)
+// const evenNumbers = mixedNumbers.filter(function(element){return element % 2 === 0 })
+const evenNumbers = mixedNumbers.filter(elem => elem % 2 === 0) 
+console.log(evenNumbers)
 
 
-
-////////// PROBLEM 2 //////////
+////////// PROBLEM 2 ////////////////////////////////////////////////////////////////////////////////////////////
 
 // Do not edit the code below.
 const prices = [15.00, 23.00, 78.00, 34.00, 12.00, 86.00, 12.00, 79.00, 32.00];
@@ -39,11 +40,11 @@ const prices = [15.00, 23.00, 78.00, 34.00, 12.00, 86.00, 12.00, 79.00, 32.00];
 */
 
 // CODE HERE
-const postTaxPrices // = prices.map(/* Provide Your Callback Here );
+const postTaxPrices  = prices.map(elemenent => elemenent * 1.07);
+console.log(postTaxPrices)
 
 
-
-////////// PROBLEM 3 //////////
+////////// PROBLEM 3 ////////////////////////////////////////////////////////////////////////////////////////////
 
 // Do not edit the code below.
 const populations = [8175133, 3792621, 2695598, 2100263];
@@ -57,11 +58,13 @@ const populations = [8175133, 3792621, 2695598, 2100263];
 */
 
 // CODE HERE
-const totalPopulation //  = populations.reduce(/* Provide Your Callback Here */)
+// const totalPopulation  = populations.reduce(function(acc, curr){ return acc + curr})
+const totalPopulation  = populations.reduce((acc, curr) => acc + curr)
+console.log(totalPopulation)
 
 
 
-////////// PROBLEM 4 //////////
+////////// PROBLEM 4 ////////////////////////////////////////////////////////////////////////////////////////////
 
 // Do not edit the code below.
 const monstersInYourPocket = [{"monster":"Bulbabunny","CP":156},{"monster":"Bulbabunny","CP":135},
@@ -77,16 +80,17 @@ const monstersInYourPocket = [{"monster":"Bulbabunny","CP":156},{"monster":"Bulb
 
 /*
   Now we're going to ramp these up a little bit.
-  Instead of just arrays of numbers, we are going to have array of objects that we want to use map, filter, and reduce with.
-  Use the filter method to return only the monsters that have a CP of over 200.
+  Instead of just arrays of numbers, we are going to have array of objects 
+  that we want to use map, filter, and reduce with. Use the filter method 
+  to return only the monsters that have a CP of over 200.
 */
 
 // CODE HERE
-const myStrongest // = monstersInYourPocket.filter(/* Provide Your Callback Here */)
+const myStrongest = monstersInYourPocket.filter(monster => monster["CP"] > 200)
+console.log(myStrongest)
 
 
-
-////////// PROBLEM 5 //////////
+////////// PROBLEM 5 /////////////////////////////////////////////////////////////////////////////////////////////
 
 // Do not edit code below.
 const orders = [{"price":15,"tax":0.09},{"price":42,"tax":0.07},{"price":56,"tax":0.11},
@@ -96,14 +100,16 @@ const orders = [{"price":15,"tax":0.09},{"price":42,"tax":0.07},{"price":56,"tax
 // Do not edit code above.
 
 /*
-  Use a higher order method to get all the order totals after adding in the sales tax (given to you as a tax rate, hint: you'll need to do some multiplication). Your answer should be an array of numbers, one total for each order.
+  Use a higher order method to get all the order totals after adding in the sales tax 
+  (given to you as a tax rate, hint: you'll need to do some multiplication). Your 
+  answer should be an array of numbers, one total for each order.
 */
 
 // CODE HERE
+const ordersTotal = orders.map((order) => order['price'] * (1 + order['tax']))
+console.log(ordersTotal)
 
-
-
-////////// PROBLEM 6 //////////
+////////// PROBLEM 6 ///////////////////////////////////////////////////////////////////////////////////////////////
 
 // Do not edit the code below.
 const purchases = [{"owner":"Barry","price":103},{"owner":"Bob","price":75},
@@ -120,3 +126,6 @@ const purchases = [{"owner":"Barry","price":103},{"owner":"Bob","price":75},
 */
 
 // CODE HERE
+const bobsTotal = purchases.filter((purch) => purch['owner'] === "Bob").reduce((acc, curr) => acc + curr['price'], 0)
+console.log(bobsTotal)
+////////// END //////////////////////////////////////////////////////////////////////////////////////////////////////

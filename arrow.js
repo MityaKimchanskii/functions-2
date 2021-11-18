@@ -1,4 +1,4 @@
-////////// PROBLEM 1 //////////
+////////// PROBLEM 1 ////////////////////////////////////////////////////////////////////////////////////////////
 
 /*
   Which syntax was used to create the function below?
@@ -15,7 +15,7 @@ console.log('expression')
 
 
 
-////////// PROBLEM 2 //////////
+////////// PROBLEM 2 ////////////////////////////////////////////////////////////////////////////////////////////
 
 /*
   Which syntax was used to create the function below?
@@ -39,7 +39,7 @@ const exclaimThree = str => `${str.toUpperCase()} + '!!!'`
 let ex = exclaimThree('hello')
 console.log(ex)
 
-////////// PROBLEM 3 //////////
+////////// PROBLEM 3 ////////////////////////////////////////////////////////////////////////////////////////////
 
 /*
   Which syntax was used to create the function below?
@@ -56,7 +56,7 @@ console.log('declaration')
 
 
 
-////////// PROBLEM 4 //////////
+////////// PROBLEM 4 ////////////////////////////////////////////////////////////////////////////////////////////
 
 /*
     Write an arrow function called 'jsNinja' that returns the string: 'I am a JavaScript ninja!'
@@ -66,7 +66,9 @@ console.log('declaration')
 const jsNinja = () => "I am a JavaScript ninja!"
 let nj = jsNinja()
 console.log(nj)
-////////// PROBLEM 5 //////////
+
+
+////////// PROBLEM 5 ////////////////////////////////////////////////////////////////////////////////////////////
 
 /*
     Write an arrow function called 'compareNums' that takes in 2 parameters, 
@@ -91,7 +93,7 @@ let some = compareNums(25,56)
 console.log(some)
 
 // const compareNums = (num1, num2) => num1 = +num1, num2 = +num2, 
-////////// PROBLEM 6 //////////
+////////// PROBLEM 6 ////////////////////////////////////////////////////////////////////////////////////////////////
 
 /*
     Write a one line arrow function called 'bestMovie' that takes in one parameter,
@@ -108,3 +110,5 @@ console.log(some)
 const bestMovie = (title) => `${title} is the best movie ever!`
 let film = bestMovie('Mission impossible')
 console.log(film)
+
+///////// END //////////////////////////////////////////////////////////////////////////////////////////////////////
