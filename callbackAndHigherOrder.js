@@ -150,9 +150,11 @@ uniq (names, printArr)
 */
 
 // CODE HERE 
-const each = (names, cb) => {
-
-
+const each = (arr, cb) => {
+  for (let i = 0; i < arr.length; i++){
+    return (i, arr[i])
+  }
+  cb(i, arr[i])
 }
 
 /*
