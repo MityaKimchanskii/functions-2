@@ -136,10 +136,12 @@ const uniq = (arr, cb) => {
 */
 
 // CODE HERE
-const printArr = (uniqArr) => {
+// const printArr = (uniqArr) => {
+//   console.log(`The new array ${uniqArr}`)
+// }
+uniq (names, printArr = (uniqArr) => {
   console.log(`The new array ${uniqArr}`)
-}
-uniq (names, printArr)
+})
 
 
 ////////// PROBLEM 6 ///////////////////////////////////////////////////////////////////////////////////////////////
@@ -152,9 +154,8 @@ uniq (names, printArr)
 // CODE HERE 
 const each = (arr, cb) => {
   for (let i = 0; i < arr.length; i++){
-    return (i, arr[i])
+     cb (i, arr[i])
   }
-  cb(i, arr[i])
 }
 
 /*
@@ -165,9 +166,12 @@ const each = (arr, cb) => {
 */
 
 // CODE HERE
+each(names, cb2 = (item, index) => {
+  console.log(`The item at index ${item} is ${index}.`)
+})
 
 
-////////// PROBLEM 7 //////////
+////////// PROBLEM 7 /////////////////////////////////////////////////////////////////////////////////////////////////
 
 /*
   Write a function called getUserById that takes in three parameters: an array of objects (users), 
@@ -199,17 +203,26 @@ var users = [
 // Do not edit the code above.
 
 // CODE HERE 
+const getUserById = (arr, id, cb) => {
+    for (let i = 0; i < arr.length; i++){
+      if (arr[i].id === id) {
+        cb (arr[i])
+      } else {
+        false
+    }
+  }
+}
 
 
 // UNCOMMENT THE FUNCTION CALL BELOW
 // RUN THIS FILE WITH NODE
 // CHECK YOUR ANSWER
 
-// getUserById(users, '16t', user => {
-//   console.log('The user with the id 16t has the email of ' + user.email + ' the name of ' + user.name + ' and the address of ' + user.address) 
-// })
+getUserById(users, '16t', user => {
+  console.log('The user with the id 16t has the email of ' + user.email + ' the name of ' + user.name + ' and the address of ' + user.address) 
+})
 
-////////// CHALLENGE //////////
+////////// CHALLENGE ///////////////////////////////////////////////////////////////////////////////////////////////////
 
 /*
   You'll be writing a higher order function that returns
@@ -226,6 +239,11 @@ var users = [
 */
 
 // CODE HERE
+const addingFactory = (num1) => {
+  return anotherFunction = (num2) => {
+    return num1 + num2
+  }
+}
 
 /*
   Now that you have addingFactory, you can create other
@@ -240,6 +258,7 @@ var users = [
 */
 
 // CODE HERE
+const addTen = addingFactory(10)
 
 /*
   Now the inner function is stored in the addTen variable! 
@@ -252,6 +271,7 @@ var users = [
 */
 
 // CODE HERE
+console.log(addTen(5))
 
 /*
   Let's make another function from the addingFactory. 
@@ -265,3 +285,7 @@ var users = [
 */
 
 // CODE HERE
+const addNUMBER = addingFactory(10000000000000)
+console.log(addNUMBER(8888888888888))
+
+//////////////  END  //////////////////////////////////////////////////////////////////////////////////////////////////
